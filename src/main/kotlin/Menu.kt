@@ -2,26 +2,34 @@ class Menu {
     fun visual1(): Int {
         val salida = "!"
         println("SELECCIONA UN MODO DE JUEGO")
-        println("1-FACIL")
-        println("2-NORMAL")
-        println("3-DIFICIL")
+
+        println("1-FACIL -> MAPA 10x10, PUNTUACION 20")
+        println("2-NORMAL -> MAPA 15x15, PUNTUACION 30")
+        println("3-DIFICIL -> MAPA 20x20, PUNTUACION 40")
         println("SI QUIRES SALIR INTRODUCE !")
-        var respuesta = readln().toInt()
-        while (respuesta.toString() != salida) {
-            if (respuesta == 1) {
-                return Iconos.FACIL
-            } else if (respuesta == 2) {
-                return Iconos.NORMAL
+        var respuesta = readln()
+        while (respuesta != salida) {
+            when (respuesta) {
+                "1" -> {
+                    return Iconos.FACIL
+                }
+                "2" -> {
+                    return Iconos.NORMAL
 
-            } else if (respuesta == 3) {
-                Iconos.DIFICL
+                }
+                "3" -> {
+                    Iconos.DIFICL
 
-            }else {
-                println("HAS DE DECIDIR ALGO CON LOS NUMEROS")
-                respuesta = readln().toInt()
+                }
+                else -> {
+                    println("HAS DE DECIDIR ALGO CON LOS NUMEROS")
+                    respuesta = readln()
+                }
             }
         }
-            return Iconos.NORMAL
+        println("PUES ADIOS")
+      visual1()
+            return 0
         }
 
 

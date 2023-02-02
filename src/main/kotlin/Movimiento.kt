@@ -37,6 +37,7 @@ class Movimiento(val difficulty: Int) {
 
         Thread.sleep(Iconos.REFRESH)
         if (serTamano > 0) {
+            mapa[posicionx - serTamano][posiciony] = Iconos.VACIO
             mapeo.suma(posicionx, posiciony, serTamano, Posiciones.ABAJO)
         }
 
@@ -67,6 +68,7 @@ class Movimiento(val difficulty: Int) {
         Thread.sleep(Iconos.REFRESH)
 
         if (serTamano > 0) {
+            mapa[posicionx][posiciony - serTamano] = Iconos.VACIO
             mapeo.suma(posicionx, posiciony, serTamano, Posiciones.DERECHA)
         }
         try {
@@ -90,6 +92,7 @@ class Movimiento(val difficulty: Int) {
         Thread.sleep(Iconos.REFRESH)
 
         if (serTamano > 0) {
+            mapa[posicionx + serTamano][posiciony] = Iconos.VACIO
             mapeo.suma(posicionx, posiciony, serTamano, Posiciones.ARRIBA)
         }
 
@@ -121,6 +124,7 @@ class Movimiento(val difficulty: Int) {
         Thread.sleep(Iconos.REFRESH)
 
         if (serTamano > 0) {
+            mapa[posicionx][posiciony + serTamano] = Iconos.VACIO
             mapeo.suma(posicionx, posiciony, serTamano, Posiciones.IZQUIERDA)
         }
 

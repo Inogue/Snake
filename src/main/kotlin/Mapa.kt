@@ -9,7 +9,7 @@ open class Mapa(tamano: Int) {
                 mapa[x].add(Iconos.MAPA)
             }
         }
-        mapa[2][2] = Iconos.MANZANA
+
 
         this.mapa = mapa
     }
@@ -19,30 +19,30 @@ open class Mapa(tamano: Int) {
         when (movment) {
             Posiciones.ABAJO -> {
                 for (elem in 0..serTamano) {
-                    mapa[posicionx - elem-serTamano+1][posiciony] = Iconos.SERPIENTE
+                    mapa[posicionx - elem][posiciony] = Iconos.SERPIENTE
                 }
             }
             Posiciones.DERECHA -> {
                 for (elem in 0..serTamano) {
-                    mapa[posicionx][posiciony - elem-serTamano+1] = Iconos.SERPIENTE
+                    mapa[posicionx][posiciony - elem] = Iconos.SERPIENTE
 
                 }
             }
             Posiciones.ARRIBA -> {
                 for (elem in 0..serTamano) {
-                    mapa[posicionx + elem+serTamano-1][posiciony] = Iconos.SERPIENTE
+                    mapa[posicionx + elem][posiciony] = Iconos.SERPIENTE
 
                 }
             }
             Posiciones.IZQUIERDA -> {
                 for (elem in 0..serTamano+serTamano) {
-                    mapa[posicionx][posiciony + elem+serTamano-1] = Iconos.SERPIENTE
+                    mapa[posicionx][posiciony + elem] = Iconos.SERPIENTE
 
                 }
             }
             else -> {
                 for (elem in 0..serTamano) {
-                    mapa[posicionx][posiciony - elem-serTamano+1] = Iconos.SERPIENTE
+                    mapa[posicionx][posiciony - elem] = Iconos.SERPIENTE
 
                 }
             }
