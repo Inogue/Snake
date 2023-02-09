@@ -1,29 +1,10 @@
+import javax.swing.ImageIcon
+
 object Iconos {
-    //Valores constantes del mapa
-    const val VACIO = " · "
-    const val SERPIENTE = " ■ "
-    const val MANZANA = " O "
-    val MAPA = null
-    const val REFRESH = 500.toLong()
-    const val FACIL = 10
-    const val NORMAL = 15
-    const val DIFICL = 20
-   const val VICTORIA = "\n" +
-           "  _    _                _____      ______                _    _                _____       _____\n" +
-           " | |  | |     /\\      / ____|    / ____|       /\\     | \\ | |     /\\      |  __ \\  /  _____ \\ \n" +
-           " | |__| |    /  \\    | (___     | |  ____     /  \\    |  \\| |    /  \\     | |  | |  | |     | |\n" +
-           " |  __  |   / /\\\\   \\___ \\   | | |_   |   / /\\\\   | . `  |   / /\\ \\   | |  | |  | |     | |\n" +
-           " | |  | |  / ____ \\   ____) |   | | __|  |  / ____ \\  | |\\  |  / ____ \\   | |__| |  | |_____| |\n" +
-           " |_|  |_| /_/    \\_\\ |_____/    \\_____ | /_/   \\_\\ |_| \\_| /_/    \\_\\ |_____/  \\______ / \n" +
-           "                                                                                        \n" +
-           "                                                                                        \n"
-    const val MUERTE =
-                "   __   __  _______  _______    __   __  __   __  _______  ______    _______  _______ \n" +
-                "  |  | |  ||   _   ||       |  |  |_|  ||  | |  ||       ||    _ |  |       ||       |\n" +
-                "  |  |_|  ||  |_|  ||  _____|  |       ||  | |  ||    ___||   | ||  |_     _||   _   |\n" +
-                "  |       ||       || |_____   |       ||  |_|  ||   |___ |   |_||_   |   |  |  | |  |\n" +
-                "  |       ||       ||_____  |  |       ||       ||    ___||    __  |  |   |  |  |_|  |\n" +
-                "  |   _   ||   _   | _____| |  | ||_|| ||       ||   |___ |   |  | |  |   |  |       |\n" +
-                "  |__| |__||__| |__||_______|  |_|   |_||_______||_______||___|  |_|  |___|  |_______|"
+    //Valores constantes del mapa, como las imagenes
+    val SERPIENTE = ImageIcon("src/main/resources/serpiente.png")
+    val CABEZA = ImageIcon("src/main/resources/cabeza.png")
+    val MANZANA = ImageIcon("src/main/resources/manzana.png")
 }
+
 
